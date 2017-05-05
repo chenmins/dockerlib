@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM daocloud.io/ubuntu:14.04
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r mysql && useradd -r -g mysql mysql
@@ -61,6 +61,8 @@ RUN mkdir -p /etc/mysql/conf.d \
 		echo 'skip-name-resolve'; \
 		echo 'datadir = /var/lib/mysql'; \
 		echo '!includedir /etc/mysql/conf.d/'; \
+		echo 'lower_case_table_names=1'; \
+		echo 'character_set_server = utf8'; \
 	} > /etc/mysql/my.cnf
 
 RUN mkdir -p /var/lib/mysql /var/run/mysqld \
