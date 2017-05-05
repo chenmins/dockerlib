@@ -1,5 +1,5 @@
-FROM daocloud.io/ubuntu:14.04
-
+FROM debian:jessie_163
+# https://github.com/chenmins/dockerlib/tree/master/debian/jessie
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r mysql && useradd -r -g mysql mysql
 
