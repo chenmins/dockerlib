@@ -11,9 +11,9 @@ RUN \
 RUN mkdir /var/run/sshd
 
 # Add root password
-RUN echo 'root:111111' | chpasswd
+RUN echo 'root:000000' | chpasswd
 
-RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 # SSH login fix. Otherwise user is kicked off after login
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
