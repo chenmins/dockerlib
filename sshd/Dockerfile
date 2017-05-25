@@ -11,7 +11,7 @@ RUN \
 RUN mkdir /var/run/sshd
 
 # Add root password
-RUN echo 'root:000000' | chpasswd
+RUN echo 'root:111111' | chpasswd
 
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
