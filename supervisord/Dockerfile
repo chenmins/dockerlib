@@ -3,7 +3,7 @@
 # Base Docker Image http://dockerfile.github.io/#/ubuntu
 # Authoer: Chenmin
 
-FROM docker pull chenmins/ubuntu
+FROM chenmins/ubuntu
 
 MAINTAINER Chenmin <cnlll@qq.com>
 
