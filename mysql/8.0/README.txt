@@ -1,6 +1,6 @@
 build
 
-docker build -t chenmins/mysql:5.7 ./
+docker build -t chenmins/mysql:8.0 ./
 
 -----
 
