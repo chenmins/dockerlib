@@ -1,7 +1,7 @@
 version: '2'
 services:
     app:
-        image: chenmin/mysql:5.7
+        image: chenmins/mysql:5.7
         ports: 
             - 3306:3306
         container_name: mysql
