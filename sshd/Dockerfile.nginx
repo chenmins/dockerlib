@@ -1,0 +1,11 @@
+FROM chenmins/sshd:oracle-jdk8
+
+MAINTAINER Chenmin <cnlll@qq.com>
+
+RUN sudo apt-get update \
+	&& sudo apt-get install -y nginx\
+	&& sudo apt-get clean
+	
+COPY nginx.conf /etc/supervisor/conf.d/
+
+EXPOSE 22 80 9001
